@@ -1,41 +1,62 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+// import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from"sweetalert2";
 
 
 const Contact =()=>{
-    const [name, setHtext] = useState("");
-    const [msg, setMsg] = useState("");
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+emailjs.sendForm('mymail', 'mailtemp', e.target, 'user_99C5dOnKTAHWxqGk0SmjN')
+    .then((result) => {
+        
+    }, (error) => {
+       
+    });
+    e.target.reset()
+}
+
+  const [name, setHtext] = useState("");
 
   function handle(event) {
-    const name = event.target.value;
-    const msg = event.target.value;
-    setMsg(msg);
+    const name = event.target.value; 
     setHtext(name);
   }
-  function handle2(event) {
-    const msg = event.target.value;
-    setMsg(msg);
-  }
-
 
 function isSend(){
-    alert(name + " ThankQ submiting query"+ msg);
+if(name){
+    Swal.fire(
+    name,
+    ' email sent Successfully !',
+    'success'
+  );
+} else 
+Swal.fire({
+  icon: 'error',
+  title: 'Please fill the details',
+  text: 'Something went wrong!',
+})
 }
+
+
     return(
         <>
 
 
-       <div class="container mb-5">
-  <form >
+       <div class="container col-6 col-10 mb-5">
+  <form onSubmit={sendEmail}>
     <label for="fname">First Name</label>
-    <input type="text" id="fname" onChange={handle} name="firstname" placeholder="Your name"/>
+    <input type="text" id="fname" onChange={handle} name="name" placeholder="Your name" autoFocus/>
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name"/>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name" />
     <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your Email"/>
+    <input type="text"  id="email" name="email" placeholder="Your Email"/>
 
     <label for="subject">Subject</label>
-    <textarea onChange={handle2} id="subject" name="subject" placeholder="Write something"></textarea>
+    <textarea id="subject" name="subject" placeholder="Write something"></textarea>
 
     <input type="submit" onClick={isSend}value="Submit"/>
   </form>

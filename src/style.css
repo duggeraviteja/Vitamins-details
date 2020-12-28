@@ -167,6 +167,7 @@ input[type=text], select, textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
+    background: none;
     resize: vertical;
   }
   
@@ -185,9 +186,10 @@ input[type=text], select, textarea {
   
   .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 20px;
+
   }
+
 
   .btn-start{
       font-weight: 500;
