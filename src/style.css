@@ -1,0 +1,210 @@
+body{
+    font-family: 'Andika New Basic', sans-serif !important;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+.navbar-brand{
+font-size:2rem !important;
+}
+.nav-active{
+    font-weight: bold;
+    width:fit-content;
+    border-bottom: 1px solid blue;
+}
+.animated{
+animation: up-down 2s ease-in-out infinite alternate-reverse both ;
+}
+ @-webkit-keyframes up-down {
+     0%{
+         transform: translateY(10px); 
+     }
+     100% {
+         transform: translateY(-10px);   
+     }
+ }
+ @keyframes up-down {
+    0%{
+        transform: translateY(10px); 
+    }
+    100% {
+        transform: translateY(-10px);   
+    }
+}
+ .vit::after{
+     content: "A";
+    font-size: 5rem;
+    transition: 0.02;
+animation: change-text 10s infinite linear alternate-reverse;
+
+ }
+@keyframes change-text{
+    0% {content: "A"; color:blue;}
+    20% {content: "B"; color:red;}
+    40% {content: "C";color: yellow;}
+    60% {content: "D"; color:orange}
+    80% {content: "E";color:green;}
+    100% {content: "K";color:ivory;}
+} 
+
+.card-title{
+    font-size: 2.5rem;
+}
+.img-d{
+    text-overflow:inherit;
+    margin: 10px 10px 0px 0;
+    border: 7px solid #9AECDB;
+   width: 120px;
+   height: 120px;
+   float: left;
+   border-radius:50%;
+}
+.img-d:hover{
+    width: 130px;
+    height: 130px;
+    border: 7px solid #1B9CFC;
+    background-color:#9AECDB;
+
+}
+.ccard{
+    border: 2px solid lightblue;
+    overflow: hidden;
+    border-radius: 20px 20px;
+    height: 16.5rem;
+}
+th,td,tr{
+    border: 2px solid rgb(188, 215, 226);
+    text-align: center;
+}
+.fru-card{
+    border-radius: 10px;
+    border: none;
+  
+    background: none;
+}
+
+.img-card3{
+   width: 80px;
+   height: 80px;
+ text-decoration: none;
+   border-radius:50%;
+}
+
+.animated-2{
+    align-items: center;
+   height: 15rem;
+   animation: rig-lef 2s ease-in-out alternate-reverse both ;
+}
+
+@keyframes rig-lef {
+    100%{
+        background-color:orchid;
+    }
+    50% {
+        background-color: rgb(9, 235, 235);
+    }
+0%{
+    background-color: none;
+}
+}
+.vit-card{
+    height: 20rem;
+    background: none;
+    border-width: 30px;
+    border: 2px dotted orange;
+    box-shadow: 2px 3px 3px 4px whitesmoke;
+   
+}
+
+.nav-link:hover{
+    font-weight: bold;
+   
+}
+.centerdiv{
+	background-color: #54a0ff;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    bottom: 0;
+	 overflow: hidden;
+	  padding-bottom: 10px;
+
+}
+
+.centerdiv a{
+	width: 50px;
+	height: 50px;
+	background-color: #f5f6fa;
+	border-radius: 50%;
+	text-align: center;
+	margin: 15px;
+	line-height: 60px;
+	box-shadow: 1px 4px 2px 2px #dcdde1;
+}
+.centerdiv a i {
+	transition: all 0.3s linear;
+}
+ .centerdiv a:hover {
+ 	transform: scale(1.2);
+ }
+
+.fa-instagram{
+	color: #e84393;
+}
+.fa-linkedin{
+	color: #0097e6;
+}
+.fa-twitter{
+	color:#0096e6;
+
+}
+
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .btn-start{
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 50px;
+      transition: 0.5s;
+      color:#3498db;
+      border: 2px solid #3498db;
+      text-decoration: none;
+     
+    
+  }
+  .btn-start:hover{
+      background: #1dd1a1;
+      color:#ffff;
+      box-shadow: 2px 2px 3px 4px #54a0ff;
+  }
