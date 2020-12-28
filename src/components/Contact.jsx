@@ -53,7 +53,7 @@ function isSend(){
 	</a>
 
 
-	  <a href="https://www.instagram.com/_raviteja_01">
+	  <a href="https://www.instagram.com/__raviteja__01">
 		<i class="fab fa-2x fa-instagram"></i>
 	</a>
 
